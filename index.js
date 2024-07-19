@@ -23,7 +23,7 @@ app.use(express.json());// lee json
 app.use(cookieParser());//modifica las cookies
 app.use(express.urlencoded({extended: false})); 
 app.use(sassMiddleware({
-    src: path.join(__dirname, '/styleSass/scss'), // Carpeta donde están los archivos SCSS
+    //src: path.join(__dirname, '/styleSass/scss'), // Carpeta donde están los archivos SCSS
     //dist: path.join(__dirname, '/styleSass/css'),// Carpeta donde se generará el CSS compilado
     }));// Estilo de salida (puedes usar 'expanded' para desarrollo)
 
