@@ -1,6 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-import sassMiddleware from "node-sass-middleware";
+//import sassMiddleware from "node-sass-middleware";
 
 
 //truco __dirname
@@ -28,7 +28,7 @@ app.use(sassMiddleware({
     }));// Estilo de salida (puedes usar 'expanded' para desarrollo)
 
 //Rutas endpoint con middleware
-app.get("/",(req, res)=> res.sendFile(__dirname + "/index.html"));
+//app.get("/",(req, res)=> res.sendFile(__dirname + "/index.html"));
 app.get("/login",autorization.soloPublic,(req, res)=> res.sendFile(__dirname + "/pages/login.html"));
 app.get("/registro",autorization.soloPublic,(req, res)=> res.sendFile(__dirname + "/pages/register.html"));
 app.get("/agenda",autorization.soloAdmin,(req, res)=> res.sendFile(__dirname + "/pages/agenda/agenda.html"));
